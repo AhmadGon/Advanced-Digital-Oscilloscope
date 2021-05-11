@@ -1,0 +1,25 @@
+module Test(
+	input CS, 
+	output reg [11:0] test_1,test_2,test_3
+);
+
+always@(posedge CS)
+	begin
+	if (count_2 == 1535) count_2 <= 0; 
+	else count_2 <= count_2 + 1;
+	if (count_1 == 499) count_1 <= 0; 
+	else count_1 <= count_1 + 1;
+	end
+	
+TestCH1	TestCH1_inst (
+	.address ( count_1 ),
+	.clock ( CS ),
+	.q ( test_1 )
+	);
+TestCH2	TestCH2_inst (
+	.address ( count_2 ),
+	.clock ( CS ),
+	.q ( test_2 )
+	);
+	
+endmodule 

@@ -1,0 +1,26 @@
+//================================================================
+//     Frequency Calculator Module
+//		 
+//		 This module is responsible for calculating the frequency
+//		 of the two analog channels
+//================================================================
+module Frequency_Calculator(
+	input Main_CLK,
+	input [5:0] TimeScale,
+	input [8:0] CH1_Right_Time_Cursor, CH1_Left_Time_Cursor, CH2_Right_Time_Cursor, CH2_Left_Time_Cursor,
+	output reg [19:0] CH1_BCD, CH2_BCD
+);
+reg [15:0] CH1_Binary, CH2_Binary;
+always @(posedge Main_CLK)
+	begin
+	if (CH1_Right_Time_Cursor > CH1_Left_Time_Cursor) 
+		begin
+		CH1_Binary <= 50000000 / ((TimeScale * (CH1_Right_Time_Cursor - CH1_Left_Time_Cursor));
+		end
+	else 
+		begin
+		CH1_Binary <= 50000000 / ((TimeScale * (CH1_Left_Time_Cursor - CH1_Right_Time_Cursor));
+		end
+	end
+end
+endmodule 

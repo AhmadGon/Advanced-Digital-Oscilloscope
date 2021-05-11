@@ -1,0 +1,49 @@
+module Read_Write_Control(
+	/** VGA_CLK is used to write data, but the whole module is clocked with SDRAM_CLK */
+	input VGA_CLK, SDRAM_CLK, Reset, ScreenCapture,
+	/** Write pixel data to SDRAM */
+	input[23:0] Write_Data,
+	/** Write/Read address */
+	input[24:0] Address,
+	/** Chip select */
+	output CS,
+	/** Since we need to only write 24 bits so we need to enable 3 bytes, this signal is responsible for this */
+	output[3:0] ByteEnable_N,
+	/** Output signal results from read/write operation through this module */
+	output[24:0] COM_Address,
+	output COM_Read_Write_N,
+	output[23:0] COM_Write_Data
+	output[24:0] COM_Address
+);
+
+reg Read_Write_N;
+reg ScreenCaptureFinish_Flag;
+
+/** If screen capture is set to high it means start taking screen shot until receiving capture finish flag*/
+always @(posedge SDRAM_CLK)
+	begin
+	if (!Reset) Read_Write_N <= 0;
+	else
+		begin
+		if (ScreenCapture && !ScreenCaptureFinish_Flag) Read_Write_N <= 0;
+		else Read_Write_N <= 1;
+		end
+	end
+
+always @(posedge SDRAM_CLK)
+	begin
+	if (!Reset)
+		begin
+		end
+	else
+		begin
+		/** If reading operation is activated, should be activated only by NIOS */
+		if (Read_Write_N)
+			begin
+			end
+		else
+			begin
+			end
+		end
+	end
+endmodule 

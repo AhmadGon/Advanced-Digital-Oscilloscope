@@ -1,0 +1,16 @@
+module BitRangeExtractor(
+	input Main_CLK, Module_Enable,
+	input [7:0] StartBit, EndBit,
+	input [22:0] InputToExtractFrom,
+	output reg [22:0] ExtractedBits,
+	output reg Valid_Output
+);
+reg [4:0] Bit_Counter;
+always @(posedge Main_CLK)
+	begin
+	if (Module_Enable)
+		begin
+		
+		end
+	end
+endmodule 

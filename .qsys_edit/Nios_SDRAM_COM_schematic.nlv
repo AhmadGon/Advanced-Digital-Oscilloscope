@@ -1,0 +1,31 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Nios_SDRAM_COM.OnChip_memory -pg 1 -lvl 2 -y 540
+preplace inst Nios_SDRAM_COM.NiosII.reset_bridge -pg 1
+preplace inst Nios_SDRAM_COM.NiosII.cpu -pg 1
+preplace inst Nios_SDRAM_COM.SystemID -pg 1 -lvl 2 -y 620
+preplace inst Nios_SDRAM_COM.SDRAM_Controller -pg 1 -lvl 2 -y 700
+preplace inst Nios_SDRAM_COM.NiosII -pg 1 -lvl 1 -y 210
+preplace inst Nios_SDRAM_COM.NiosII.clock_bridge -pg 1
+preplace inst Nios_SDRAM_COM.PLL -pg 1 -lvl 2 -y 440
+preplace inst Nios_SDRAM_COM.DATA -pg 1 -lvl 2 -y 100
+preplace inst Nios_SDRAM_COM.Address -pg 1 -lvl 2 -y 340
+preplace inst Nios_SDRAM_COM.JTAG -pg 1 -lvl 2 -y 240
+preplace inst Nios_SDRAM_COM.Event_Register -pg 1 -lvl 3 -y 40
+preplace inst Nios_SDRAM_COM.clk_0 -pg 1 -lvl 1 -y 440
+preplace inst Nios_SDRAM_COM -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc FAN_OUT<net_container>Nios_SDRAM_COM</net_container>(SLAVE)JTAG.clk,(SLAVE)OnChip_memory.clk1,(SLAVE)SystemID.clk,(SLAVE)DATA.clk,(SLAVE)SDRAM_Controller.clk,(SLAVE)Address.clk,(SLAVE)Event_Register.clk,(SLAVE)NiosII.clk,(MASTER)PLL.c0) 1 0 3 130 130 610 530 890
+preplace netloc EXPORT<net_container>Nios_SDRAM_COM</net_container>(SLAVE)Address.external_connection,(SLAVE)Nios_SDRAM_COM.output_address) 1 0 2 NJ 370 NJ
+preplace netloc EXPORT<net_container>Nios_SDRAM_COM</net_container>(SLAVE)Event_Register.external_connection,(SLAVE)Nios_SDRAM_COM.events) 1 0 3 NJ 40 NJ 40 NJ
+preplace netloc POINT_TO_POINT<net_container>Nios_SDRAM_COM</net_container>(MASTER)clk_0.clk,(SLAVE)PLL.inclk_interface) 1 1 1 N
+preplace netloc EXPORT<net_container>Nios_SDRAM_COM</net_container>(SLAVE)Nios_SDRAM_COM.sdram_signals,(SLAVE)SDRAM_Controller.wire) 1 0 2 NJ 770 NJ
+preplace netloc EXPORT<net_container>Nios_SDRAM_COM</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)Nios_SDRAM_COM.reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>Nios_SDRAM_COM</net_container>(SLAVE)Address.s1,(SLAVE)SystemID.control_slave,(MASTER)NiosII.data_master,(SLAVE)PLL.pll_slave,(SLAVE)NiosII.debug_mem_slave,(SLAVE)JTAG.avalon_jtag_slave,(MASTER)NiosII.instruction_master,(SLAVE)OnChip_memory.s1,(SLAVE)DATA.s1,(SLAVE)Event_Register.s1) 1 0 3 150 150 530 70 850
+preplace netloc EXPORT<net_container>Nios_SDRAM_COM</net_container>(MASTER)Nios_SDRAM_COM.clk_100_sdram,(MASTER)PLL.c1) 1 2 2 NJ 470 NJ
+preplace netloc EXPORT<net_container>Nios_SDRAM_COM</net_container>(SLAVE)DATA.external_connection,(SLAVE)Nios_SDRAM_COM.input_data) 1 0 2 NJ 110 NJ
+preplace netloc INTERCONNECT<net_container>Nios_SDRAM_COM</net_container>(SLAVE)SystemID.reset,(SLAVE)OnChip_memory.reset1,(SLAVE)NiosII.reset,(SLAVE)DATA.reset,(MASTER)clk_0.clk_reset,(MASTER)NiosII.debug_reset_request,(SLAVE)SDRAM_Controller.reset,(SLAVE)Event_Register.reset,(SLAVE)PLL.inclk_interface_reset,(SLAVE)Address.reset,(SLAVE)JTAG.reset) 1 0 3 170 170 570 90 N
+preplace netloc EXPORT<net_container>Nios_SDRAM_COM</net_container>(SLAVE)Nios_SDRAM_COM.sdram_com,(SLAVE)SDRAM_Controller.s1) 1 0 2 NJ 750 NJ
+preplace netloc EXPORT<net_container>Nios_SDRAM_COM</net_container>(SLAVE)Nios_SDRAM_COM.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>Nios_SDRAM_COM</net_container>(SLAVE)JTAG.irq,(MASTER)NiosII.irq) 1 1 1 550
+levelinfo -pg 1 0 100 1180
+levelinfo -hier Nios_SDRAM_COM 110 290 660 920 1070

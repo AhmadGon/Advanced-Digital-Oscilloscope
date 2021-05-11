@@ -1,0 +1,209 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "08/07/2020 15:32:23"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Amplitude_Calculator
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Amplitude_Calculator_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [6:0] Amplitude_Scale;
+reg [8:0] CH1_Down_Amplitude_Cursor;
+reg [8:0] CH1_Up_Amplitude_Cursor;
+reg [8:0] CH2_Down_Amplitude_Cursor;
+reg [8:0] CH2_Up_Amplitude_Cursor;
+reg Main_CLK;
+// wires                                               
+wire [19:0] CH1_BCD;
+wire [31:0] CH1_Numerator_FP;
+wire [31:0] CH1_Result;
+wire [19:0] CH2_BCD;
+wire [31:0] CH2_Numerator_FP;
+wire [31:0] CH2_Result;
+
+// assign statements (if any)                          
+Amplitude_Calculator i1 (
+// port map - connection between master ports and signals/registers   
+	.Amplitude_Scale(Amplitude_Scale),
+	.CH1_BCD(CH1_BCD),
+	.CH1_Down_Amplitude_Cursor(CH1_Down_Amplitude_Cursor),
+	.CH1_Numerator_FP(CH1_Numerator_FP),
+	.CH1_Result(CH1_Result),
+	.CH1_Up_Amplitude_Cursor(CH1_Up_Amplitude_Cursor),
+	.CH2_BCD(CH2_BCD),
+	.CH2_Down_Amplitude_Cursor(CH2_Down_Amplitude_Cursor),
+	.CH2_Numerator_FP(CH2_Numerator_FP),
+	.CH2_Result(CH2_Result),
+	.CH2_Up_Amplitude_Cursor(CH2_Up_Amplitude_Cursor),
+	.Main_CLK(Main_CLK)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// Main_CLK
+always
+begin
+	Main_CLK = 1'b0;
+	Main_CLK = #5000 1'b1;
+	#5000;
+end 
+// Amplitude_Scale[ 6 ]
+initial
+begin
+	Amplitude_Scale[6] = 1'b0;
+end 
+// Amplitude_Scale[ 5 ]
+initial
+begin
+	Amplitude_Scale[5] = 1'b0;
+end 
+// Amplitude_Scale[ 4 ]
+initial
+begin
+	Amplitude_Scale[4] = 1'b0;
+end 
+// Amplitude_Scale[ 3 ]
+initial
+begin
+	Amplitude_Scale[3] = 1'b0;
+end 
+// Amplitude_Scale[ 2 ]
+initial
+begin
+	Amplitude_Scale[2] = 1'b0;
+	Amplitude_Scale[2] = #20000 1'b1;
+end 
+// Amplitude_Scale[ 1 ]
+initial
+begin
+	Amplitude_Scale[1] = 1'b0;
+end 
+// Amplitude_Scale[ 0 ]
+initial
+begin
+	Amplitude_Scale[0] = 1'b0;
+end 
+// CH1_Down_Amplitude_Cursor[ 8 ]
+initial
+begin
+	CH1_Down_Amplitude_Cursor[8] = 1'b0;
+end 
+// CH1_Down_Amplitude_Cursor[ 7 ]
+initial
+begin
+	CH1_Down_Amplitude_Cursor[7] = 1'b0;
+end 
+// CH1_Down_Amplitude_Cursor[ 6 ]
+initial
+begin
+	CH1_Down_Amplitude_Cursor[6] = 1'b0;
+	CH1_Down_Amplitude_Cursor[6] = #20000 1'b1;
+end 
+// CH1_Down_Amplitude_Cursor[ 5 ]
+initial
+begin
+	CH1_Down_Amplitude_Cursor[5] = 1'b0;
+	CH1_Down_Amplitude_Cursor[5] = #20000 1'b1;
+end 
+// CH1_Down_Amplitude_Cursor[ 4 ]
+initial
+begin
+	CH1_Down_Amplitude_Cursor[4] = 1'b0;
+	CH1_Down_Amplitude_Cursor[4] = #20000 1'b1;
+end 
+// CH1_Down_Amplitude_Cursor[ 3 ]
+initial
+begin
+	CH1_Down_Amplitude_Cursor[3] = 1'b0;
+	CH1_Down_Amplitude_Cursor[3] = #20000 1'b1;
+end 
+// CH1_Down_Amplitude_Cursor[ 2 ]
+initial
+begin
+	CH1_Down_Amplitude_Cursor[2] = 1'b0;
+end 
+// CH1_Down_Amplitude_Cursor[ 1 ]
+initial
+begin
+	CH1_Down_Amplitude_Cursor[1] = 1'b0;
+end 
+// CH1_Down_Amplitude_Cursor[ 0 ]
+initial
+begin
+	CH1_Down_Amplitude_Cursor[0] = 1'b0;
+end 
+// CH1_Up_Amplitude_Cursor[ 8 ]
+initial
+begin
+	CH1_Up_Amplitude_Cursor[8] = 1'b0;
+	CH1_Up_Amplitude_Cursor[8] = #20000 1'b1;
+end 
+// CH1_Up_Amplitude_Cursor[ 7 ]
+initial
+begin
+	CH1_Up_Amplitude_Cursor[7] = 1'b0;
+end 
+// CH1_Up_Amplitude_Cursor[ 6 ]
+initial
+begin
+	CH1_Up_Amplitude_Cursor[6] = 1'b0;
+end 
+// CH1_Up_Amplitude_Cursor[ 5 ]
+initial
+begin
+	CH1_Up_Amplitude_Cursor[5] = 1'b0;
+	CH1_Up_Amplitude_Cursor[5] = #20000 1'b1;
+end 
+// CH1_Up_Amplitude_Cursor[ 4 ]
+initial
+begin
+	CH1_Up_Amplitude_Cursor[4] = 1'b0;
+end 
+// CH1_Up_Amplitude_Cursor[ 3 ]
+initial
+begin
+	CH1_Up_Amplitude_Cursor[3] = 1'b0;
+	CH1_Up_Amplitude_Cursor[3] = #20000 1'b1;
+end 
+// CH1_Up_Amplitude_Cursor[ 2 ]
+initial
+begin
+	CH1_Up_Amplitude_Cursor[2] = 1'b0;
+	CH1_Up_Amplitude_Cursor[2] = #20000 1'b1;
+end 
+// CH1_Up_Amplitude_Cursor[ 1 ]
+initial
+begin
+	CH1_Up_Amplitude_Cursor[1] = 1'b0;
+end 
+// CH1_Up_Amplitude_Cursor[ 0 ]
+initial
+begin
+	CH1_Up_Amplitude_Cursor[0] = 1'b0;
+end 
+endmodule
+

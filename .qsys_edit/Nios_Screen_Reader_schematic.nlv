@@ -1,0 +1,33 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Nios_Screen_Reader.Loading_Percentage -pg 1 -lvl 3 -y 730
+preplace inst Nios_Screen_Reader.Event_Register -pg 1 -lvl 3 -y 530
+preplace inst Nios_Screen_Reader.OnChip_memory -pg 1 -lvl 3 -y 130
+preplace inst Nios_Screen_Reader.Response_Register -pg 1 -lvl 3 -y 630
+preplace inst Nios_Screen_Reader.JTAG -pg 1 -lvl 3 -y 30
+preplace inst Nios_Screen_Reader.PLL -pg 1 -lvl 2 -y 180
+preplace inst Nios_Screen_Reader.NiosII.cpu -pg 1
+preplace inst Nios_Screen_Reader.clk_0 -pg 1 -lvl 1 -y 240
+preplace inst Nios_Screen_Reader.NiosII.clock_bridge -pg 1
+preplace inst Nios_Screen_Reader.NiosII -pg 1 -lvl 1 -y 50
+preplace inst Nios_Screen_Reader -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst Nios_Screen_Reader.NiosII.reset_bridge -pg 1
+preplace inst Nios_Screen_Reader.DATA -pg 1 -lvl 3 -y 290
+preplace inst Nios_Screen_Reader.Clock_Bridge -pg 1 -lvl 3 -y 490
+preplace inst Nios_Screen_Reader.Address -pg 1 -lvl 3 -y 390
+preplace inst Nios_Screen_Reader.SystemID -pg 1 -lvl 3 -y 210
+preplace netloc EXPORT<net_container>Nios_Screen_Reader</net_container>(MASTER)Clock_Bridge.out_clk,(MASTER)Nios_Screen_Reader.clock_bridge_out_clk) 1 3 1 N
+preplace netloc INTERCONNECT<net_container>Nios_Screen_Reader</net_container>(SLAVE)DATA.reset,(SLAVE)SystemID.reset,(SLAVE)JTAG.reset,(SLAVE)Response_Register.reset,(MASTER)NiosII.debug_reset_request,(SLAVE)PLL.inclk_interface_reset,(SLAVE)Loading_Percentage.reset,(SLAVE)OnChip_memory.reset1,(SLAVE)Event_Register.reset,(MASTER)clk_0.clk_reset,(SLAVE)NiosII.reset,(SLAVE)Address.reset) 1 0 3 190 210 550 290 890
+preplace netloc EXPORT<net_container>Nios_Screen_Reader</net_container>(SLAVE)Nios_Screen_Reader.input_data,(SLAVE)DATA.external_connection) 1 0 3 NJ 320 NJ 320 NJ
+preplace netloc INTERCONNECT<net_container>Nios_Screen_Reader</net_container>(SLAVE)Address.s1,(SLAVE)Response_Register.s1,(SLAVE)PLL.pll_slave,(SLAVE)Event_Register.s1,(SLAVE)JTAG.avalon_jtag_slave,(SLAVE)NiosII.debug_mem_slave,(SLAVE)OnChip_memory.s1,(SLAVE)DATA.s1,(MASTER)NiosII.data_master,(SLAVE)SystemID.control_slave,(SLAVE)Loading_Percentage.s1,(MASTER)NiosII.instruction_master) 1 0 3 150 230 590 270 870
+preplace netloc EXPORT<net_container>Nios_Screen_Reader</net_container>(SLAVE)Nios_Screen_Reader.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Nios_Screen_Reader</net_container>(SLAVE)clk_0.clk_in,(SLAVE)Nios_Screen_Reader.clk) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>Nios_Screen_Reader</net_container>(SLAVE)JTAG.irq,(MASTER)NiosII.irq) 1 1 2 NJ 140 830
+preplace netloc EXPORT<net_container>Nios_Screen_Reader</net_container>(SLAVE)Nios_Screen_Reader.response,(SLAVE)Response_Register.external_connection) 1 0 3 NJ 660 NJ 660 NJ
+preplace netloc EXPORT<net_container>Nios_Screen_Reader</net_container>(SLAVE)Loading_Percentage.external_connection,(SLAVE)Nios_Screen_Reader.loading_percentage) 1 0 3 NJ 760 NJ 760 NJ
+preplace netloc EXPORT<net_container>Nios_Screen_Reader</net_container>(SLAVE)Event_Register.external_connection,(SLAVE)Nios_Screen_Reader.events) 1 0 3 NJ 560 NJ 560 NJ
+preplace netloc POINT_TO_POINT<net_container>Nios_Screen_Reader</net_container>(SLAVE)PLL.inclk_interface,(MASTER)clk_0.clk) 1 1 1 610
+preplace netloc EXPORT<net_container>Nios_Screen_Reader</net_container>(SLAVE)Nios_Screen_Reader.output_address,(SLAVE)Address.external_connection) 1 0 3 NJ 420 NJ 420 NJ
+preplace netloc FAN_OUT<net_container>Nios_Screen_Reader</net_container>(SLAVE)Loading_Percentage.clk,(SLAVE)Event_Register.clk,(SLAVE)Clock_Bridge.in_clk,(MASTER)PLL.c0,(SLAVE)JTAG.clk,(SLAVE)DATA.clk,(SLAVE)Response_Register.clk,(SLAVE)SystemID.clk,(SLAVE)OnChip_memory.clk1,(SLAVE)Address.clk,(SLAVE)NiosII.clk) 1 0 3 170 190 NJ 170 850
+levelinfo -pg 1 0 120 1240
+levelinfo -hier Nios_Screen_Reader 130 310 640 930 1080

@@ -1,0 +1,22 @@
+module Amplitude_Calculator(
+	input Main_CLK,
+	input [6:0] Amplitude_Scale,
+	input [8:0] CH1_Up_Amplitude_Cursor, CH1_Down_Amplitude_Cursor, CH2_Up_Amplitude_Cursor, CH2_Down_Amplitude_Cursor,
+	output reg [19:0] CH1_BCD, CH2_BCD
+);
+
+reg [19:0] CH1_Numerator, CH2_Numerator;
+
+always @(posedge Main_CLK)
+	begin
+	if (CH1_Up_Amplitude_Cursor > CH1_Down_Amplitude_Cursor)
+		begin
+		CH1_Numerator <= Amplitude_Scale * (CH1_Up_Amplitude_Cursor - CH1_Down_Amplitude_Cursor) * 10;
+		end
+	else
+		begin
+		CH1_Numerator <= Amplitude_Scale * (CH1_Down_Amplitude_Cursor - CH1_Up_Amplitude_Cursor) * 10;
+		end
+	end
+
+endmodule 

@@ -1,0 +1,23 @@
+/*     //=====================================       
+ *    //       Digital Oscilloscope		     ||       
+ *   //	This project is a result of coope- ||       
+ *   ||	ration between Ahmad and Mustafa   ||       
+ *   ||  an electrical engineering student  ||       
+ *   ||  of Jordan University of Science    ||       
+ *   ||  and Technology						     //       
+ *   ||												 //        
+ *   =====================================//         
+ */                                                  
+
+module Top(
+	/** Clock and reset */
+	input Main_CLK, Reset,
+	/** VGA control signals */
+	output VGA_CLK, Hsync, Vsync, Sync_N, Blank_N,
+	/** VGA output signals */
+	output reg[7:0] Red, Green, Blue
+	/** Test Signals */
+	
+);
+
+endmodule 

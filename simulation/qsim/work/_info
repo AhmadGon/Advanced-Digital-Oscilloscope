@@ -1,0 +1,251 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dM:/FPGA_Projects/Verilog_Projects/Advanced_Digital_Oscillscope/simulation/qsim
+vAmplitude_Calculator
+!s110 1597090157
+!i10b 1
+!s100 GSNR18UQB>^m`cI`Kgd^52
+ICOoh<GzRfFKa1R>j8imRb2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dM:/FPGA_Projects/Verilog_Projects/Advanced_Digital_Oscillscope_Newest/Advanced_Digital_Oscillscope/simulation/qsim
+w1597090156
+Z3 8Top.vo
+Z4 FTop.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1597090157.000000
+Z8 !s107 Top.vo|
+Z9 !s90 -work|work|Top.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@amplitude_@calculator
+vAmplitude_Calculator_vlg_vec_tst
+!s110 1597090158
+!i10b 1
+!s100 V>74M6EoK?AKklHeQiB:?1
+IF^caCURo^41873187^;AO3
+R1
+R2
+w1597090154
+8Amplitude_Calculator_TestBench.vwf.vt
+FAmplitude_Calculator_TestBench.vwf.vt
+Z12 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Amplitude_Calculator_TestBench.vwf.vt|
+!s90 -work|work|Amplitude_Calculator_TestBench.vwf.vt|
+!i113 1
+R10
+R11
+n@amplitude_@calculator_vlg_vec_tst
+vBitRangeExtractor
+!s110 1597089158
+!i10b 1
+!s100 f816K7nQ7`BU9EY1NMi]a3
+I;kNBk5@CIC@=eOe14m5J61
+R1
+R2
+w1597089158
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1597089158.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@bit@range@extractor
+vBitRangeExtractor_vlg_vec_tst
+!s110 1597089159
+!i10b 1
+!s100 ]i?R>5ZzH6AR0^C3ieeC:0
+IVQb>70YNLIEZ1PNKoGh<N2
+R1
+R2
+w1597089157
+8BitRangeExtractor_TestBench.vwf.vt
+FBitRangeExtractor_TestBench.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R13
+!s107 BitRangeExtractor_TestBench.vwf.vt|
+!s90 -work|work|BitRangeExtractor_TestBench.vwf.vt|
+!i113 1
+R10
+R11
+n@bit@range@extractor_vlg_vec_tst
+vBitShifter
+Z14 !s110 1597163203
+!i10b 1
+!s100 dUF?SXQKRfiz;NcS19XKk0
+IOg:_AZB2J_@fNha5VomZ>3
+R1
+R2
+Z15 w1597163200
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z16 !s108 1597163202.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@bit@shifter
+vBitShifter_vlg_vec_tst
+R14
+!i10b 1
+!s100 5nO_DcE7M<G@@g8U0RWQW0
+I=lkL[Tdi:<ehTSlniI_Hm3
+R1
+R2
+w1597163199
+8BitShifter_TestBench.vwf.vt
+FBitShifter_TestBench.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+!s108 1597163203.000000
+!s107 BitShifter_TestBench.vwf.vt|
+!s90 -work|work|BitShifter_TestBench.vwf.vt|
+!i113 1
+R10
+R11
+n@bit@shifter_vlg_vec_tst
+vFrequency_Calculator
+!s110 1596217602
+!i10b 1
+!s100 M2^TFa=Ad_D5UGmiee1NF3
+IPdEZK^DAd:e_E3lk8][_]0
+R1
+R2
+w1596217601
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1596217602.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@frequency_@calculator
+vFrequency_Calculator_vlg_vec_tst
+!s110 1596217603
+!i10b 1
+!s100 ?[ckC`QnR[P3^lWgEKLI`3
+Ii9[@K0<DWBe8bQjVVz]Y:2
+R1
+R2
+w1596217599
+8Frequency_Calculator_TestBench.vwf.vt
+FFrequency_Calculator_TestBench.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+!s108 1596217603.000000
+!s107 Frequency_Calculator_TestBench.vwf.vt|
+!s90 -work|work|Frequency_Calculator_TestBench.vwf.vt|
+!i113 1
+R10
+R11
+n@frequency_@calculator_vlg_vec_tst
+vhard_block
+R14
+!i10b 1
+!s100 VDJ[@I5NBGJdA5UGTg8]33
+ID8T:JQnU;TeaM5@<ZI@lX2
+R1
+R2
+R15
+R3
+R4
+L0 3309
+R6
+r1
+!s85 0
+31
+R16
+R8
+R9
+!i113 1
+R10
+R11
+vVGA_Controls
+Z17 !s110 1593535920
+!i10b 1
+!s100 Q6oJUFM54:[c=4Dc4i:bE0
+IlH;E2VLBbA84cX^nddX852
+R1
+R0
+Z18 w1593535919
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z19 !s108 1593535920.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@v@g@a_@controls
+vVGA_Controls_vlg_vec_tst
+R17
+!i10b 1
+!s100 5T<ZcaDz_0hV@BP5b^J;`0
+Ie3c_GaWB8?f8A3`kJW5@l0
+R1
+R0
+R18
+8VGA_Controls.vwf.vt
+FVGA_Controls.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R19
+!s107 VGA_Controls.vwf.vt|
+!s90 -work|work|VGA_Controls.vwf.vt|
+!i113 1
+R10
+R11
+n@v@g@a_@controls_vlg_vec_tst

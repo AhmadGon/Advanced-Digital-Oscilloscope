@@ -1,0 +1,6 @@
+00:17:30 **** Clean-only build of configuration Nios II for project NiosII_Screen_Reader_bsp ****
+make clean 
+[BSP clean complete]
+
+00:17:30 Build Finished (took 276ms)
+

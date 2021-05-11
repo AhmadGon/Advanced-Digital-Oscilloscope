@@ -1,0 +1,15 @@
+//================================================================
+//     GUI Module
+//		 
+//		 This module is responsible for displaying scope's graphical
+//		 User Interface
+//================================================================
+module GUI(
+	/** VGA Clock and reset */
+	input VGA_CLK, Reset,
+	/** Horizontal and vertical pixel counters */
+	input [9:0] H_Pixel, V_Pixel,
+	/** Outputs red, green and blue signals */
+	output reg[7:0] Red, Green, Blue
+);
+endmodule 

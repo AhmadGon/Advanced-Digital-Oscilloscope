@@ -1,0 +1,36 @@
+//================================================================
+//     VGA Controls Module
+//		 
+//		 This module generates necessary signals for displaying
+//     images with 640×480 resolution with 60Hz refresh rate
+//================================================================
+module VGA_Controls(
+	/** Clock and reset */
+	input Main_CLK, Reset,
+	/** VGA control signals */
+	output reg VGA_CLK, Hsync, Vsync, Sync_N, Blank_N,
+	/** Horizontal and vertical pixel counters */
+	output reg[9:0] H_Pixels, V_Pixels
+);
+
+reg[10:0] H_Counter, V_Counter;
+reg Divider;
+
+//====================================
+/** Generate 25MHz pixel clock */
+always @(posedge Main_CLK)
+	begin
+	if (!reset)
+		begin
+		H_Counter <= 0;
+		V_Counter <= 0;
+		Divider <= 0;
+		end
+	else
+		begin
+		Divider <= Divider + 1;
+		if (Divider == 0) VGA_CLK <= 0;
+		else VGA_CLK <= 1;
+		end
+	end
+endmodule 

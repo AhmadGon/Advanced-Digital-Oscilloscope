@@ -1,0 +1,68 @@
+/*      Memory Management      */
+/*                             */
+/*                             */
+
+module Memory_Management(
+	input Main_CLK, CS, VGA_CLK,	
+	input [11:0]Address,
+	input [11:0] ADC_Out_A, ADC_Out_B,
+	output [11:0]Data_CH_1, Data_CH_2,
+	output [23:0]Color_Of_Images
+);
+reg WREN_RAM1_CH1, WREN_RAM2_CH1;
+reg WREN_RAM1_CH2, WREN_RAM2_CH2;
+always@(posedge Main_CLK)
+	begin
+	if (address < 1920) 
+		begin
+		WREN_RAM1_CH1 <= 1;
+		WREN_RAM2_CH1 <= 0;
+		WREN_RAM1_CH2 <= 1;
+		WREN_RAM2_CH2 <= 0;
+		end
+	else 
+		begin
+		WREN_RAM1_CH1 <= 0;
+		WREN_RAM2_CH1 <= 1;
+		WREN_RAM1_CH2 <= 0;
+		WREN_RAM2_CH2 <= 1;
+		end
+	end
+
+assign clock_RAM1_CH1 =  (WREN_RAM1_CH1) ? ( CS ) : ( VGA_CLK );
+assign clock_RAM2_CH1 =  (WREN_RAM2_CH1) ? ( CS ) : ( VGA_CLK );
+assign clock_RAM1_CH2 =  (WREN_RAM1_CH2) ? ( CS ) : ( VGA_CLK );
+assign clock_RAM2_CH2 =  (WREN_RAM2_CH2) ? ( CS ) : ( VGA_CLK );
+//====================================================
+// Memory for CH 1
+RAM1_CH1	RAM1_CH1_inst (
+	.address ( Address ),
+	.clock ( clock_RAM1_CH1 ),
+	.data ( ADC_Out_A ),
+	.wren ( WREN_RAM1_CH1 ),
+	.q ( Data_CH_1 )
+	);
+RAM2_CH1	RAM2_CH1_inst (
+	.address ( Address ),
+	.clock ( clock_RAM2_CH1 ),
+	.data ( ADC_Out_A ),
+	.wren ( WREN_RAM2_CH1 ),
+	.q ( Data_CH_1 )
+	);
+//====================================================
+// Memory for CH 2
+RAM1_CH2	RAM1_CH2_inst (
+	.address ( Address ),
+	.clock ( clock_RAM1_CH2 ),
+	.data ( ADC_Out_B ),
+	.wren ( WREN_RAM1_CH2 ),
+	.q ( Data_CH_2 )
+	);
+RAM2_CH2	RAM2_CH2_inst (
+	.address ( Address ),
+	.clock ( clock_RAM2_CH2 ),
+	.data ( ADC_Out_B ),
+	.wren ( WREN_RAM2_CH2 ),
+	.q ( Data_CH_2 )
+	);
+//====================================================

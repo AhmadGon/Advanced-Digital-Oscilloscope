@@ -1,0 +1,21 @@
+module BitShifter(
+	input Main_CLK, RightLeftShift_Switch,
+	input [7:0] InputToShift, ShiftNumber,
+	output reg [7:0] ShiftedOutput
+);
+reg [7:0] Shift_Counter, Multiplication_Number;
+always @(posedge Main_CLK)
+	begin
+	if (Shift_Counter < ShiftNumber) Shift_Counter <= Shift_Counter + 1;
+	else Shift_Counter <= 0;
+	end
+always @(Main_CLK)
+	begin
+	if (Shift_Counter < ShiftNumber) 
+		begin
+		if (RightLeftShift_Switch) InputToShift <= InputToShift * 2;
+		else InputToShift <= InputToShift / 2;
+		end
+	else InputToShift <= InputToShift;
+	end
+endmodule 

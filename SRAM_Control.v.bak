@@ -1,0 +1,43 @@
+module SRAM_Control(
+	input Main_CLK, VGA_CLK, Reset, ScreenCapture,
+	input[19:0] Address,
+	input[23:0] Pixel_Data,
+	inout[15:0] Data,
+	output OE_N, CE_N, LB_N, UB_N, WriteFinish_Flag,
+	output reg WE_N
+);
+
+reg[18:0] Pixel_Address;
+reg[15:0] Data_Chunk;
+
+assign Data = (ScreenCapture)? Pixel_Data : 16'hzz;
+assign OE_N = 0;
+assign CE_N = 0;
+assign LB_N = 0;
+assign UB_N = 0;
+
+always @(posedge Main_CLK)
+	begin
+	if (!Reset) Pixel_Address <= 0;
+	else
+		begin
+		if (ScreenCapture) 
+			begin
+			Pixel_Address <= Pixel_Address + 1;
+			WE_N <= 0;
+			if (Pixel_Address == 307199)
+				begin
+				Pixel_Address <= 0;
+				WriteFinish_Flag <= 1;
+				end
+			else WriteFinish_Flag <= 0;
+			end
+		else
+			begin
+			Pixel_Address <= 0;
+			WriteFinish_Flag <= 0;
+			WE_N <= 1;
+			end
+		end
+	end
+endmodule 

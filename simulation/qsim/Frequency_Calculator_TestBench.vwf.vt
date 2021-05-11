@@ -1,0 +1,314 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "07/31/2020 20:46:39"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Frequency_Calculator
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Frequency_Calculator_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [8:0] CH1_Left_Time_Cursor;
+reg [8:0] CH1_Right_Time_Cursor;
+reg [8:0] CH2_Left_Time_Cursor;
+reg [8:0] CH2_Right_Time_Cursor;
+reg Main_CLK;
+reg [5:0] TimeScale;
+// wires                                               
+wire [19:0] CH1_BCD;
+wire [19:0] CH2_BCD;
+
+// assign statements (if any)                          
+Frequency_Calculator i1 (
+// port map - connection between master ports and signals/registers   
+	.CH1_BCD(CH1_BCD),
+	.CH1_Left_Time_Cursor(CH1_Left_Time_Cursor),
+	.CH1_Right_Time_Cursor(CH1_Right_Time_Cursor),
+	.CH2_BCD(CH2_BCD),
+	.CH2_Left_Time_Cursor(CH2_Left_Time_Cursor),
+	.CH2_Right_Time_Cursor(CH2_Right_Time_Cursor),
+	.Main_CLK(Main_CLK),
+	.TimeScale(TimeScale)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// TimeScale[ 5 ]
+initial
+begin
+	TimeScale[5] = 1'b1;
+	TimeScale[5] = #170000 1'b0;
+end 
+// TimeScale[ 4 ]
+initial
+begin
+	TimeScale[4] = 1'b0;
+	TimeScale[4] = #170000 1'b1;
+	TimeScale[4] = #160000 1'b0;
+end 
+// TimeScale[ 3 ]
+initial
+begin
+	TimeScale[3] = 1'b0;
+	TimeScale[3] = #330000 1'b1;
+	TimeScale[3] = #160000 1'b0;
+end 
+// TimeScale[ 2 ]
+initial
+begin
+	TimeScale[2] = 1'b0;
+	TimeScale[2] = #490000 1'b1;
+	TimeScale[2] = #150000 1'b0;
+end 
+// TimeScale[ 1 ]
+initial
+begin
+	TimeScale[1] = 1'b0;
+	TimeScale[1] = #640000 1'b1;
+	TimeScale[1] = #140000 1'b0;
+end 
+// TimeScale[ 0 ]
+initial
+begin
+	TimeScale[0] = 1'b0;
+	TimeScale[0] = #780000 1'b1;
+	TimeScale[0] = #170000 1'b0;
+end 
+
+// Main_CLK
+always
+begin
+	Main_CLK = 1'b0;
+	Main_CLK = #5000 1'b1;
+	#5000;
+end 
+// CH2_Right_Time_Cursor[ 8 ]
+initial
+begin
+	CH2_Right_Time_Cursor[8] = 1'b1;
+	CH2_Right_Time_Cursor[8] = #170000 1'b0;
+end 
+// CH2_Right_Time_Cursor[ 7 ]
+initial
+begin
+	CH2_Right_Time_Cursor[7] = 1'b1;
+	CH2_Right_Time_Cursor[7] = #330000 1'b0;
+end 
+// CH2_Right_Time_Cursor[ 6 ]
+initial
+begin
+	CH2_Right_Time_Cursor[6] = 1'b1;
+	CH2_Right_Time_Cursor[6] = #330000 1'b0;
+end 
+// CH2_Right_Time_Cursor[ 5 ]
+initial
+begin
+	CH2_Right_Time_Cursor[5] = 1'b1;
+	CH2_Right_Time_Cursor[5] = #170000 1'b0;
+end 
+// CH2_Right_Time_Cursor[ 4 ]
+initial
+begin
+	CH2_Right_Time_Cursor[4] = 1'b0;
+end 
+// CH2_Right_Time_Cursor[ 3 ]
+initial
+begin
+	CH2_Right_Time_Cursor[3] = 1'b0;
+	CH2_Right_Time_Cursor[3] = #170000 1'b1;
+	CH2_Right_Time_Cursor[3] = #160000 1'b0;
+end 
+// CH2_Right_Time_Cursor[ 2 ]
+initial
+begin
+	CH2_Right_Time_Cursor[2] = 1'b0;
+end 
+// CH2_Right_Time_Cursor[ 1 ]
+initial
+begin
+	CH2_Right_Time_Cursor[1] = 1'b0;
+end 
+// CH2_Right_Time_Cursor[ 0 ]
+initial
+begin
+	CH2_Right_Time_Cursor[0] = 1'b0;
+end 
+// CH2_Left_Time_Cursor[ 8 ]
+initial
+begin
+	CH2_Left_Time_Cursor[8] = 1'b0;
+end 
+// CH2_Left_Time_Cursor[ 7 ]
+initial
+begin
+	CH2_Left_Time_Cursor[7] = 1'b0;
+end 
+// CH2_Left_Time_Cursor[ 6 ]
+initial
+begin
+	CH2_Left_Time_Cursor[6] = 1'b0;
+	CH2_Left_Time_Cursor[6] = #170000 1'b1;
+	CH2_Left_Time_Cursor[6] = #160000 1'b0;
+end 
+// CH2_Left_Time_Cursor[ 5 ]
+initial
+begin
+	CH2_Left_Time_Cursor[5] = 1'b0;
+	CH2_Left_Time_Cursor[5] = #170000 1'b1;
+	CH2_Left_Time_Cursor[5] = #160000 1'b0;
+end 
+// CH2_Left_Time_Cursor[ 4 ]
+initial
+begin
+	CH2_Left_Time_Cursor[4] = 1'b0;
+end 
+// CH2_Left_Time_Cursor[ 3 ]
+initial
+begin
+	CH2_Left_Time_Cursor[3] = 1'b0;
+end 
+// CH2_Left_Time_Cursor[ 2 ]
+initial
+begin
+	CH2_Left_Time_Cursor[2] = 1'b0;
+	CH2_Left_Time_Cursor[2] = #170000 1'b1;
+	CH2_Left_Time_Cursor[2] = #160000 1'b0;
+end 
+// CH2_Left_Time_Cursor[ 1 ]
+initial
+begin
+	CH2_Left_Time_Cursor[1] = 1'b0;
+end 
+// CH2_Left_Time_Cursor[ 0 ]
+initial
+begin
+	CH2_Left_Time_Cursor[0] = 1'b0;
+end 
+// CH1_Right_Time_Cursor[ 8 ]
+initial
+begin
+	CH1_Right_Time_Cursor[8] = 1'b0;
+end 
+// CH1_Right_Time_Cursor[ 7 ]
+initial
+begin
+	CH1_Right_Time_Cursor[7] = 1'b0;
+end 
+// CH1_Right_Time_Cursor[ 6 ]
+initial
+begin
+	CH1_Right_Time_Cursor[6] = 1'b0;
+	CH1_Right_Time_Cursor[6] = #170000 1'b1;
+	CH1_Right_Time_Cursor[6] = #160000 1'b0;
+end 
+// CH1_Right_Time_Cursor[ 5 ]
+initial
+begin
+	CH1_Right_Time_Cursor[5] = 1'b0;
+	CH1_Right_Time_Cursor[5] = #170000 1'b1;
+	CH1_Right_Time_Cursor[5] = #160000 1'b0;
+end 
+// CH1_Right_Time_Cursor[ 4 ]
+initial
+begin
+	CH1_Right_Time_Cursor[4] = 1'b0;
+end 
+// CH1_Right_Time_Cursor[ 3 ]
+initial
+begin
+	CH1_Right_Time_Cursor[3] = 1'b0;
+end 
+// CH1_Right_Time_Cursor[ 2 ]
+initial
+begin
+	CH1_Right_Time_Cursor[2] = 1'b0;
+	CH1_Right_Time_Cursor[2] = #170000 1'b1;
+	CH1_Right_Time_Cursor[2] = #160000 1'b0;
+end 
+// CH1_Right_Time_Cursor[ 1 ]
+initial
+begin
+	CH1_Right_Time_Cursor[1] = 1'b0;
+end 
+// CH1_Right_Time_Cursor[ 0 ]
+initial
+begin
+	CH1_Right_Time_Cursor[0] = 1'b0;
+end 
+// CH1_Left_Time_Cursor[ 8 ]
+initial
+begin
+	CH1_Left_Time_Cursor[8] = 1'b1;
+	CH1_Left_Time_Cursor[8] = #170000 1'b0;
+end 
+// CH1_Left_Time_Cursor[ 7 ]
+initial
+begin
+	CH1_Left_Time_Cursor[7] = 1'b1;
+	CH1_Left_Time_Cursor[7] = #170000 1'b0;
+end 
+// CH1_Left_Time_Cursor[ 6 ]
+initial
+begin
+	CH1_Left_Time_Cursor[6] = 1'b1;
+	CH1_Left_Time_Cursor[6] = #170000 1'b0;
+end 
+// CH1_Left_Time_Cursor[ 5 ]
+initial
+begin
+	CH1_Left_Time_Cursor[5] = 1'b1;
+	CH1_Left_Time_Cursor[5] = #330000 1'b0;
+end 
+// CH1_Left_Time_Cursor[ 4 ]
+initial
+begin
+	CH1_Left_Time_Cursor[4] = 1'b0;
+	CH1_Left_Time_Cursor[4] = #170000 1'b1;
+	CH1_Left_Time_Cursor[4] = #160000 1'b0;
+end 
+// CH1_Left_Time_Cursor[ 3 ]
+initial
+begin
+	CH1_Left_Time_Cursor[3] = 1'b0;
+end 
+// CH1_Left_Time_Cursor[ 2 ]
+initial
+begin
+	CH1_Left_Time_Cursor[2] = 1'b0;
+end 
+// CH1_Left_Time_Cursor[ 1 ]
+initial
+begin
+	CH1_Left_Time_Cursor[1] = 1'b0;
+	CH1_Left_Time_Cursor[1] = #170000 1'b1;
+	CH1_Left_Time_Cursor[1] = #160000 1'b0;
+end 
+// CH1_Left_Time_Cursor[ 0 ]
+initial
+begin
+	CH1_Left_Time_Cursor[0] = 1'b0;
+end 
+endmodule
+
