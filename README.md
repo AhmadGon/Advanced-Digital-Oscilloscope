@@ -5,3 +5,4 @@ A new version of digital oscilloscope project that contains denouncers on all bu
 
 ![ScopeScreenShot2](https://user-images.githubusercontent.com/52602216/117797807-1d662900-b259-11eb-8492-1eab77a517e5.jpg)
 ![ScopeScreenShot](https://user-images.githubusercontent.com/52602216/117797845-2820be00-b259-11eb-9a88-dfe70784cbe7.jpg)
+![Uploading ScopeScreenShot.jpg…]()
