@@ -1,11 +1,5 @@
 /*   ////=====================================       
- *   ///       Digital Oscilloscope		     ||       
- *   //	This project is a result of coope- ||       
- *   ||	ration between Ahmad and Mustafa   ||       
- *   ||  an electrical engineering student  ||       
- *   ||  of Jordan University of Science    ||       
- *   ||  and Technology						     //       
- *   ||												 ///        
+ *             Digital Oscilloscope   
  *   =====================================////         
  */                                                  
 
